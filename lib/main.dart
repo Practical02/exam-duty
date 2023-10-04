@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: '/admin',
       routes: {
         '/': (context) => const LoginPage(),
         '/user': (context) => const UserDashboard(),

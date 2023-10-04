@@ -34,7 +34,7 @@ class LoginPage extends StatelessWidget {
                   // Add your login logic here
                   // Typically, you'd validate the credentials and navigate to the next screen on success.
                   // For this example, we'll just navigate to the user dashboard.
-                  Navigator.pushReplacementNamed(context, '/user');
+                  Navigator.pushReplacementNamed(context, '/admin');
                 },
                 child: const Text('Login'),
               ),
