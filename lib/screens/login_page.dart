@@ -27,25 +27,25 @@ class LoginPage extends StatelessWidget {
       ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left:20.0,top:220.0,right: 20.0),
+            padding: const EdgeInsets.only(left:5.0,top:230.0,right: 5.0),
             child: Container(
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
+                  topLeft: Radius.circular(80),
+                  topRight: Radius.circular(80),
                 ),
                 color:Color.fromARGB(87, 255, 255, 255),
               ),
             ),
           ),
-          
+
           Padding(
             padding: const EdgeInsets.only(top:250.0),
             child: Container(
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40),
-                  topRight: Radius.circular(40)
+                  topLeft: Radius.circular(50),
+                  topRight: Radius.circular(50)
                 ),
                 color:Colors.white,
               ),
