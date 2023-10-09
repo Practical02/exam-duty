@@ -13,8 +13,8 @@ class LoginPage extends StatelessWidget {
         decoration: const BoxDecoration(
          gradient: LinearGradient(
           colors:[
-            Color.fromARGB(255, 53, 37, 228),
-            Colors.pink,
+             Colors.blueAccent,
+             Color.fromARGB(255, 166, 8, 198),
             ]),
         ),
       child: const Padding(
@@ -26,6 +26,19 @@ class LoginPage extends StatelessWidget {
           ),),
       ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(left:20.0,top:220.0,right: 20.0),
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
+                color:Color.fromARGB(87, 255, 255, 255),
+              ),
+            ),
+          ),
+          
           Padding(
             padding: const EdgeInsets.only(top:250.0),
             child: Container(
@@ -41,24 +54,30 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment:MainAxisAlignment.center ,
                 children:[
-                  const Padding(  
-                  padding: EdgeInsets.all(15),  
+                  Padding(  
+                  padding: const EdgeInsets.fromLTRB(150,20,150,20),  
                   child: TextField(  
                     decoration: InputDecoration(  
-                      border: OutlineInputBorder(),  
-                      labelText: 'User Name',  
-                      hintText: 'Enter Your Name',  
+                      border: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Color.fromARGB(155, 233, 227, 227)),
+                        borderRadius: BorderRadius.circular(10.0)
+                      ),  
+                      labelText: 'Email Address',  
+                      hintText: 'Enter your email',  
                     ),  
                   ),  
                 ),  
-                const Padding(  
-                  padding: EdgeInsets.all(15),  
-                  child: TextField(  
+                 Padding(  
+                  padding: EdgeInsets.fromLTRB(150,20,150,20),  
+                  child: TextField( 
                     obscureText: true,  
                     decoration: InputDecoration(  
-                      border: OutlineInputBorder(),  
+                      border: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Color.fromARGB(155, 233, 227, 227)),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),  
                       labelText: 'Password',  
-                      hintText: 'Enter Password',  
+                      hintText: 'Enter your password',  
                     ),  
                   ),  
                 ),  
@@ -68,10 +87,10 @@ ElevatedButton(
                   // Typically, you'd validate the credentials and navigate to the next screen on success.
                   // For this example, we'll just navigate to the user dashboard.
                   Navigator.pushReplacementNamed(context, '/user');
-                },
-                child: const Text('Login'),
-              ),
+                }, 
 
+                child: const Text('Login'),            
+                )
                 ]),
                ),
                ),
