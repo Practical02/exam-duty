@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
 
-class UserDashboard extends StatelessWidget {
+class UserDashboard extends StatefulWidget {
   const UserDashboard({Key? key}) : super(key: key);
 
+  @override
+  State<UserDashboard> createState() => _UserDashboardState();
+}
+
+class _UserDashboardState extends State<UserDashboard> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
