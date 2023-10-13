@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'login_page.dart';
 class UserDashboard extends StatelessWidget {
   const UserDashboard({Key? key}) : super(key: key);
 
@@ -39,7 +39,9 @@ class UserDashboard extends StatelessWidget {
               leading: const Icon(Icons.dashboard),
               title: const Text(' Dashboard '),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => UserDashboard(),
+                ));
               },
             
            
@@ -48,7 +50,9 @@ class UserDashboard extends StatelessWidget {
               leading: const Icon(Icons.logout),
               title: const Text('LogOut'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => LoginPage(),
+                ));
               },
             ),
           ],
