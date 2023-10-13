@@ -83,17 +83,26 @@ class Mycard extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                const ListTile(
-                  title: Text(
-                    'DUTY ON : ',
-                    style: TextStyle(fontSize: 20.0),
-                  ),
-                  subtitle:
-                      Text(
-                        '12-04-2023', style: TextStyle(fontSize: 18.0)
-                        ),
-                )
-              ],
+              ListTile(
+  title: Row(
+    children: <Widget>[
+      Text(
+        'DUTY ON : ',
+        style: TextStyle(fontSize: 20.0),
+      ),
+      Expanded(
+        child: TextField(
+           readOnly: true,
+          decoration: InputDecoration(
+          border: OutlineInputBorder(),
+            hintStyle: TextStyle(fontSize: .0),
+          ),
+        ),
+      ),
+    ],
+  ),
+)]
+
             )));
   }
 }
