@@ -15,7 +15,7 @@ class _UserDashboardState extends State<UserDashboard> {
       home: Scaffold(
           appBar: AppBar(
             title: const Text('User Dashboard'),
-            backgroundColor: Color.fromARGB(255, 11, 130, 185),
+            backgroundColor: const Color.fromARGB(255, 11, 130, 185),
           ),
           drawer: Drawer(
             child: ListView(
@@ -47,7 +47,7 @@ class _UserDashboardState extends State<UserDashboard> {
                   title: const Text(' Dashboard '),
                   onTap: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => UserDashboard(),
+                      builder: (context) => const UserDashboard(),
                     ));
                   },
                 ),
@@ -56,71 +56,68 @@ class _UserDashboardState extends State<UserDashboard> {
                   title: const Text('LogOut'),
                   onTap: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => LoginPage(),
+                      builder: (context) => const LoginPage(),
                     ));
                   },
                 ),
               ],
             ),
           ), //Drawer
-          body: Align(
+          body: const Align(
             alignment: Alignment.topLeft,
-            child: Mycard(),
+            child: MyCard(),
           )),
     );
   }
 }
 
-class Mycard extends StatelessWidget {
-  const Mycard({super.key});
+class MyCard extends StatelessWidget {
+  const MyCard({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: 300,
-        height: 240,
-        padding: new EdgeInsets.all(10.0),
-        child: Card(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-                side: BorderSide(
-                  color: Color.fromARGB(255, 143, 40, 129),
-                )),
-            child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-              ListTile(
-                title: Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: Column(
-                      children: [
-                        SizedBox(height: 10),
-                        Text(
-                          'DUTY ON : ',
-                          style: TextStyle(fontSize: 20.0),
-                        ),
-                        TextField(
-                          readOnly: true,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintStyle: TextStyle(fontSize: .0),
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                        Text(
-                          'DUTY AT : ',
-                          style: TextStyle(fontSize: 20.0),
-                        ),
-                        TextField(
-                          readOnly: true,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintStyle: TextStyle(fontSize: .0),
-                          ),
-                        )
-                      ],
-                    )),
-                  ],
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Container(
+        alignment: Alignment.topCenter,
+        width: double.infinity, // Set width to the device width
+        height: 200, // Set height to 200
+        child: const Card(
+          elevation: 4, // Add elevation to make it look like a card
+          child: Stack(
+            children: <Widget>[
+              // Text in the top-left corner
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text(
+                    'Top Left',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-              )
-            ])));
+              ),
+              // Text in the bottom-right corner
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text(
+                    'Bottom Right',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
