@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green
+        ,
       ),
-      initialRoute: '/',
+      initialRoute: '/user',
       routes: {
         '/': (context) => const LoginPage(),
         '/user': (context) => const UserDashboard(),
