@@ -25,7 +25,7 @@ class _UserDashboardState extends State<UserDashboard> {
               const DrawerHeader(
                 decoration: BoxDecoration(
                   color: Colors.blue,
-                ), //BoxDecoration
+                ),
                 child: UserAccountsDrawerHeader(
                   decoration: BoxDecoration(color: Colors.blue),
                   accountName: Text(
@@ -39,10 +39,10 @@ class _UserDashboardState extends State<UserDashboard> {
                     child: Text(
                       "A",
                       style: TextStyle(fontSize: 30.0, color: Colors.blue),
-                    ), //Text
-                  ), //circleAvatar
-                ), //UserAccountDrawerHeader
-              ), //DrawerHeader
+                    ),
+                  ),
+                ),
+              ),
               ListTile(
                 leading: const Icon(Icons.dashboard),
                 title: const Text(' Dashboard '),

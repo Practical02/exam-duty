@@ -9,12 +9,12 @@ class AdminDashboard extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Admin Dashboard'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Welcome to the Admin Dashboard!',
               style: TextStyle(fontSize: 20),
             ),
