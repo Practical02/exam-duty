@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({super.key});
+  final String dutyDate; // Add a parameter to hold the duty date
+
+  const MyCard({Key? key, required this.dutyDate})
+      : super(key: key); // Constructor with dutyDate parameter
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +14,7 @@ class MyCard extends StatelessWidget {
         alignment: Alignment.topCenter,
         width: double.infinity,
         height: 150,
-        child: const Card(
+        child: Card(
           elevation: 4,
           child: Stack(
             children: <Widget>[
@@ -20,7 +23,7 @@ class MyCard extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(12.0),
                   child: Text(
-                    'Top Left',
+                    'Main duty on',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -33,7 +36,7 @@ class MyCard extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.all(12.0),
                   child: Text(
-                    'Bottom Right',
+                    dutyDate, // Use the dutyDate parameter here
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
